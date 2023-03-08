@@ -31,7 +31,9 @@
     "ci": "run-s lint test build",
     "prepublishOnly": "npm run ci",
     "prepare": "husky install",
-    "upload": "node scripts/uploadSnapshot.js"
+    "upload": "node scripts/uploadSnapshot.js",
+    "vitest": "vitest",
+    "vitest:ui": "vitest --ui"
   },
   "keywords": [
     "antv",
@@ -56,6 +58,7 @@
     "@types/pngjs": "^6.0.1",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
+    "@vitest/ui": "^0.29.2",
     "ali-oss": "^6.17.1",
     "archiver": "^5.3.1",
     "canvas": "^2.10.2",
@@ -91,6 +94,7 @@
     "ts-jest": "^26.5.1",
     "typescript": "^4.1.5",
     "vite": "^3.1.0",
+    "vitest": "^0.29.2",
     "xmlserializer": "^0.6.1"
   },
   "lint-staged": {
@@ -138,6 +142,7 @@
     "d3-format": "^3.1.0",
     "d3-geo": "^3.0.1",
     "d3-hierarchy": "^3.1.2",
+    "d3-path": "^3.1.0",
     "d3-scale-chromatic": "^3.0.0",
     "d3-shape": "^3.1.0",
     "d3-voronoi": "^1.1.4"

@@ -1,21 +1,22 @@
 import {
-  DisplayObject,
-  Group,
-  Rect,
+  Canvas,
   Circle,
-  Path,
-  Text,
+  CustomEvent,
+  DisplayObject,
   Ellipse,
+  Group,
+  HTML,
   Image,
   Line,
+  Path,
   Polygon,
   Polyline,
-  HTML,
-  CustomEvent,
-  Canvas,
+  Rect,
+  Text,
 } from '@antv/g';
 import { Renderer } from '@antv/g-canvas';
 
+import { vitest } from 'vitest';
 import { G2Element, select, Selection } from '../../../src/utils/selection';
 
 function createCanvas(
@@ -458,7 +459,7 @@ describe('select', () => {
 
     const selection = select(canvas.document.documentElement);
 
-    const fn = jest.fn();
+    const fn = vitest.fn();
     const event = new CustomEvent('build');
     const circle = selection
       .append('circle')
